@@ -27,10 +27,7 @@
 				"url": {
 					"raw": "localhost:8080/students/all",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"227"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
@@ -66,10 +63,7 @@
 				"url": {
 					"raw": "localhost:8080/students/find/:id",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"227"
+						"localhost"
 					],
 					"port": "8080",
 					"path": [
