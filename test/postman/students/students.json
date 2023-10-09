@@ -74,7 +74,7 @@
 					"variable": [
 						{
 							"key": "id",
-							"value": ""
+							"value": "1"
 						}
 					]
 				}
@@ -88,7 +88,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " {\n        \"name\": \"{{name}}\",\n        \"email\": \"{{email}}\",\n        \"age\": {{age}}\n    }"
+					"raw": " {\n        \"name\": \"sn\",\n        \"email\": \"sn@sn.com\",\n        \"age\": 125\n    }"
 				},
 				"url": {
 					"raw": "localhost:8080/students/add",
