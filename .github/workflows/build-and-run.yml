@@ -61,7 +61,9 @@ jobs:
         sleep 10
     - name: run newman test
       run: |
-        newman run test/postman/students/students.json --reporters htmlextra,cli,allure --reporter-htmlextra-report sample.html
+        echo '<pre>' >> $GITHUB_STEP_SUMMARY
+        newman run test/postman/students/students.json --reporters htmlextra,cli,allure --reporter-htmlextra-report sample.html >> $GITHUB_STEP_SUMMARY
+        echo '</pre>' >> $GITHUB_STEP_SUMMARY
 
         ls -lthra
       continue-on-error: true
