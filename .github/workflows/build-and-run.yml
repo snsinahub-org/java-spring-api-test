@@ -42,5 +42,26 @@ jobs:
       with:
         name: my-app
 
-    - uses: actions/setup
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: install newman
+      run: |
+        npm install -g newman
+        npm install -g newman-reporter-htmlextra
+        npm install -g newman-reporter-allure
+        npm install -g allure
+
+    - name: run api app
+      run: | 
+        ls -lthra
+        java -jar target/mvc-0.0.1-SNAPSHOT.jar &
+        sleep 10
+    - name: run newman test
+      run: |
+        newman run test/postman/students/students.json -e sample.json --reporters htmlextra,cli,allure --reporter-htmlextra-report sample.html
+
+        ls -lthra
+
         
