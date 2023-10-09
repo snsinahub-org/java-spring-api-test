@@ -65,5 +65,10 @@ jobs:
 
         ls -lthra
       continue-on-error: true
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: newman
+        path: newman
 
         
