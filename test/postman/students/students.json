@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "cfb4572f-517e-4c05-84e6-57d319f70c08",
+		"name": "auto-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "269434"
+	},
+	"item": [
+		{
+			"name": "all-students",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('list all students', function(){",
+							"    pm.response.to.have.status(200);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.227:8080/students/all",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"227"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-students",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('search for a valid ID', function(){",
+							"    var id = 1;",
+							"",
+							"    pm.variables.get(\"id\");",
+							"    pm.response.to.have.status(200);",
+							"})",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.1.227:8080/students/find/:id",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"227"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"find",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add-student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"name\": \"{{name}}\",\n        \"email\": \"{{email}}\",\n        \"age\": {{age}}\n    }"
+				},
+				"url": {
+					"raw": "localhost:8080/students/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
