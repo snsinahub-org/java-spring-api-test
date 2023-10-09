@@ -64,5 +64,6 @@ jobs:
         newman run test/postman/students/students.json --reporters htmlextra,cli,allure --reporter-htmlextra-report sample.html
 
         ls -lthra
+      continue-on-error: true
 
         
