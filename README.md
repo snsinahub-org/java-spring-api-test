@@ -1,6 +1,17 @@
 # A project based on spring-boot for api test automation via postman and newman
 
+In this example, I created a collection and exported as JSON file...
+then run `newman` command in GitHub actions
+`newman run test/postman/students/students.json --reporters htmlextra,cli,allure --reporter-htmlextra-report sample.html >> $GITHUB_STEP_SUMMARY`
 
+## Installations
+```BASH
+npm install -g newman
+        npm install -g newman-reporter-htmlextra
+        npm install -g newman-reporter-allure
+        npm install -g allure
+
+```
 
 ## Other tools
 - Postman. Includes free and paid versions. Accessible help and tutorials.
