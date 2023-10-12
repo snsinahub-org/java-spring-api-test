@@ -7,9 +7,9 @@ then run `newman` command in GitHub actions
 ## Installations
 ```BASH
 npm install -g newman
-        npm install -g newman-reporter-htmlextra
-        npm install -g newman-reporter-allure
-        npm install -g allure
+npm install -g newman-reporter-htmlextra
+npm install -g newman-reporter-allure
+npm install -g allure
 
 ```
 
